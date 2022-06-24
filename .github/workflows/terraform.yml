@@ -1,11 +1,12 @@
 name: "Terraform"
 
+# This means that this should only run on push commands at the main branch. OR on any pull request
 on:
   push:
     branches:
       - main
   pull_request:
-
+# 8 steps, defining all actions on the workflow. I does not run every step, it varies depending if it was originated from a push or a pull request
 jobs:
   terraform:
     name: "Terraform"
